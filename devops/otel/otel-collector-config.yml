@@ -1,0 +1,18 @@
+receivers:
+  otlp:
+    protocols:
+      http: 
+
+exporters:
+  logging:
+    loglevel: info
+  otlp:
+    endpoint: tempo:3200
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [logging, otlp]
