@@ -4,6 +4,6 @@ namespace Flow.Server;
 
 public static class DiagnosticsConfig
 {
-    public const string ServiceName = "MyService";
+    public const string ServiceName = "MiServicio";
     public static ActivitySource ActivitySource = new ActivitySource(ServiceName);
 }
